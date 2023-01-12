@@ -2,26 +2,26 @@ package org.Ejercicios.ejercicio34Interface;
 
 public class Consola implements Imprimible {
 
-    private String pantalla = PROMPT;
+    private String print = PROMPT;
     private final static String PROMPT = "$";
 
 
     @Override //Sobreescribe con asteriscos
     public void borrar() {
-        int longitud = pantalla.length();
-        pantalla = "";
+        int longitud = print.length();
+        print = "";
         for (int i = 0; i < longitud; i++) {
-            pantalla += "*";
+            print += "*";
         }
     }
 
 
     @Override
     public void imprime() {
-        System.out.printf("%S%n", pantalla);
+        System.out.printf("%S%n", print);
     }
 
     public void establecerContenido (String contenido) {
-        pantalla = PROMPT + contenido;
+        print = PROMPT + contenido;
     }
 }
